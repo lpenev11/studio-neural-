@@ -2,161 +2,94 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studio Neural</title>
-
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0f0f0f;
-      color: #f2f2f2;
+      background-color: #111;
+      color: #fff;
     }
-
     header {
-      background-color: #1a1a1a;
-      padding: 20px;
+      background-color: #000;
+      padding: 1em 2em;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
+    header h1 {
       margin: 0;
-      padding: 0;
+      font-size: 1.5em;
     }
-
     nav a {
-      color: #f2f2f2;
+      color: #fff;
+      margin-left: 1em;
       text-decoration: none;
     }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .lang-switch button {
-      margin-left: 10px;
-      background: none;
-      border: 1px solid #fff;
-      color: #fff;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-
     section {
-      padding: 80px 20px;
-      border-bottom: 1px solid #333;
+      padding: 2em;
     }
-
-    .hero {
-      text-align: center;
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
     }
-
-    .projects img {
-      max-width: 100%;
+    .gallery img {
+      width: 300px;
       height: auto;
-      margin-bottom: 20px;
       border-radius: 8px;
+      object-fit: cover;
     }
-
     footer {
+      background-color: #000;
+      padding: 1em;
       text-align: center;
-      padding: 20px;
-      background-color: #1a1a1a;
-      color: #888;
+      font-size: 0.9em;
+      color: #999;
     }
   </style>
 </head>
-
 <body>
+
   <header>
     <h1>Studio Neural</h1>
     <nav>
-      <ul>
-        <li><a href="#home">Начало</a></li>
-        <li><a href="#about">За нас</a></li>
-        <li><a href="#services">Услуги</a></li>
-        <li><a href="#projects">Проекти</a></li>
-        <li><a href="#contact">Контакт</a></li>
-      </ul>
+      <a href="#about">За нас</a>
+      <a href="#projects">Проекти</a>
+      <a href="#contact">Контакт</a>
     </nav>
-    <div class="lang-switch">
-      <button onclick="switchLang('bg')">BG</button>
-      <button onclick="switchLang('en')">EN</button>
-    </div>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <h2 data-bg="Архитектура, вдъхновена от бъдещето." data-en="Architecture inspired by the future.">
-        Архитектура, вдъхновена от бъдещето.
-      </h2>
-      <p data-bg="Създаваме интелигентни пространства чрез AI." data-en="We create intelligent spaces with AI.">
-        Създаваме интелигентни пространства чрез AI.
-      </p>
-    </section>
+  <section id="about">
+    <h2>За нас</h2>
+    <p>Studio Neural е архитектурно студио, създаващо концепции и визуализации с помощта на изкуствен интелект. Проектираме бъдещето днес.</p>
+  </section>
 
-    <section id="about">
-      <h2 data-bg="За нас" data-en="About Us">За нас</h2>
-      <p data-bg="Studio Neural съчетава архитектура и изкуствен интелект за създаване на иновативни пространства."
-         data-en="Studio Neural blends architecture and AI to create innovative environments.">
-        Studio Neural съчетава архитектура и изкуствен интелект за създаване на иновативни пространства.
-      </p>
-    </section>
+  <section id="projects">
+    <h2>Проекти</h2>
+    <p>Реални визуализации от нашето портфолио:</p>
+    <div class="gallery">
+      <img src="images/img1.jpg" alt="Проект 1" />
+      <img src="images/img2.jpg" alt="Проект 2" />
+      <img src="images/img3.jpg" alt="Проект 3" />
+      <img src="images/img4.jpg" alt="Проект 4" />
+      <img src="images/img5.jpg" alt="Проект 5" />
+      <img src="images/img6.jpg" alt="Проект 6" />
+      <img src="images/img7.jpg" alt="Проект 7" />
+    </div>
+  </section>
 
-    <section id="services">
-      <h2 data-bg="Услуги" data-en="Services">Услуги</h2>
-      <ul>
-        <li data-bg="3D визуализации" data-en="3D visualizations">3D визуализации</li>
-        <li data-bg="AI концепции за сгради" data-en="AI-driven building concepts">AI концепции за сгради</li>
-        <li data-bg="Интериорен дизайн" data-en="Interior design">Интериорен дизайн</li>
-      </ul>
-    </section>
-
-    <section id="projects" class="projects">
-      <h2 data-bg="Наши проекти" data-en="Our Projects">Наши проекти</h2>
-      <p data-bg="Реални визуализации от нашето портфолио:" data-en="Real visualizations from our portfolio:">
-        Реални визуализации от нашето портфолио:
-      </p>
-
-      <!-- Вградени снимки от предишния ти пост -->
-      <img src="https://i.imgur.com/UFA15jR.jpg" alt="Проект 1"/>
-      <img src="https://i.imgur.com/ljTO2Ml.jpg" alt="Проект 2"/>
-      <img src="https://i.imgur.com/7Zx9nfw.jpg" alt="Проект 3"/>
-      <img src="https://i.imgur.com/GsyDTX0.jpg" alt="Проект 4"/>
-    </section>
-
-    <section id="contact">
-      <h2 data-bg="Контакт" data-en="Contact">Контакт</h2>
-      <p data-bg="Телефон: +359892311501" data-en="Phone: +359892311501">Телефон: +359892311501</p>
-      <p data-bg="Email: luboslavpenev2000@gmail.com" data-en="Email: luboslavpenev2000@gmail.com">
-        Email: luboslavpenev2000@gmail.com
-      </p>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Контакт</h2>
+    <p>📧 luboslavpenev2000@gmail.com</p>
+    <p>📞 +359 89 2311501</p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Studio Neural. All rights reserved.</p>
+    &copy; 2025 Studio Neural. Всички права запазени.
   </footer>
 
-  <script>
-    function switchLang(lang) {
-      document.querySelectorAll("[data-bg]").forEach(el => {
-        el.textContent = lang === "bg" ? el.getAttribute("data-bg") : el.getAttribute("data-en");
-      });
-    }
-  </script>
 </body>
 </html>
