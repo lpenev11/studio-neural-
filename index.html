@@ -11,6 +11,7 @@
       font-family: Arial, sans-serif;
       background-color: #0f0f0f;
       color: #f2f2f2;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -48,8 +49,12 @@
       cursor: pointer;
     }
 
+    section {
+      padding: 60px 20px;
+      border-bottom: 1px solid #333;
+    }
+
     .hero {
-      padding: 100px 20px;
       text-align: center;
     }
 
@@ -77,11 +82,11 @@
     <h1>Studio Neural</h1>
     <nav>
       <ul>
-        <li><a href="#" class="active">Начало / Home</a></li>
-        <li><a href="#">За нас / About</a></li>
-        <li><a href="#">Услуги / Services</a></li>
-        <li><a href="#">Проекти / Projects</a></li>
-        <li><a href="#">Контакт / Contact</a></li>
+        <li><a href="#home" class="active">Начало</a></li>
+        <li><a href="#about">За нас</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#projects">Проекти</a></li>
+        <li><a href="#contact">Контакт</a></li>
       </ul>
     </nav>
     <div class="lang-switch">
@@ -91,7 +96,8 @@
   </header>
 
   <main>
-    <section class="hero">
+    <!-- Hero section -->
+    <section id="home" class="hero">
       <h2 data-bg="Архитектура, вдъхновена от бъдещето." data-en="Architecture inspired by the future.">
         Архитектура, вдъхновена от бъдещето.
       </h2>
@@ -100,8 +106,40 @@
       </p>
     </section>
 
-    <section class="cta">
-      <a href="#" class="btn">Виж проекти / View Projects</a>
+    <!-- About section -->
+    <section id="about">
+      <h2 data-bg="За нас" data-en="About Us">За нас</h2>
+      <p data-bg="Studio Neural съчетава архитектура и изкуствен интелект за създаване на иновативни пространства."
+         data-en="Studio Neural blends architecture and AI to create innovative environments.">
+        Studio Neural съчетава архитектура и изкуствен интелект за създаване на иновативни пространства.
+      </p>
+    </section>
+
+    <!-- Services section -->
+    <section id="services">
+      <h2 data-bg="Услуги" data-en="Services">Услуги</h2>
+      <ul>
+        <li data-bg="3D визуализации" data-en="3D visualizations">3D визуализации</li>
+        <li data-bg="AI концепции за сгради" data-en="AI-driven building concepts">AI концепции за сгради</li>
+        <li data-bg="Интериорен дизайн" data-en="Interior design">Интериорен дизайн</li>
+      </ul>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects">
+      <h2 data-bg="Наши проекти" data-en="Our Projects">Наши проекти</h2>
+      <p data-bg="Скоро ще добавим визуализации на завършени обекти." data-en="Visuals of completed projects coming soon.">
+        Скоро ще добавим визуализации на завършени обекти.
+      </p>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact">
+      <h2 data-bg="Контакт" data-en="Contact">Контакт</h2>
+      <p data-bg="Телефон: +359892311501" data-en="Phone: +359892311501">Телефон: +359892311501</p>
+      <p data-bg="Email: luboslavpenev2000@gmail.com" data-en="Email: luboslavpenev2000@gmail.com">
+        Email: luboslavpenev2000@gmail.com
+      </p>
     </section>
   </main>
 
